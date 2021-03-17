@@ -1,11 +1,11 @@
 module.exports = {
-  module : {
+  module: {
     rules: [
       {
-        test   : /\.scss$/,
-        loader : 'postcss-loader',
+        test: /\.scss$/,
+        loader: 'postcss-loader',
         options: {
-          ident  : 'postcss',
+          ident: 'postcss',
           syntax: 'postcss-scss',
           plugins: () => [
             require('postcss-import'),
@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   purge: {
-    enabled: true,
+    enabled: false,
     content: [
       './src/**/*.{html,ts}',
     ]
