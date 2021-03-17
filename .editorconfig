@@ -1,0 +1,23 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+ij_typescript_spaces_within_imports = true
+ij_any_blank_lines_around_method = unset
+max_line_length = off
+ij_typescript_spaces_around_logical_operators = true
+ij_typescript_align_imports = true
+ij_typescript_prefer_explicit_types_function_returns = true
+ij_typescript_assignment_wrap = on_every_item
+
+[*.ts]
+quote_type = single
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
