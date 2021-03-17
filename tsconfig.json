@@ -3,8 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+     // Core Modules Pack's Base Path Goes Here
+     //"@services/*": ["src/NgFlow.Core/services/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
