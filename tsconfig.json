@@ -5,7 +5,7 @@
     "baseUrl": "./",
     "paths": {
       // Core Modules Pack's Base Path Goes Here
-      "@agtailw/*": ["src/@agtailw/*"],
+      "@agtailw/*": ["src/@agtailw/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -20,15 +20,12 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": false,
     "strictInjectionParameters": false,
-    "strictTemplates": true,
+    // "strictTemplates": true,
     "preserveWhitespaces": true
   }
 }
