@@ -1,7 +1,7 @@
-import { LoadingTitleAction } from './../../store/actions/title.action';
 import { Store } from '@ngrx/store';
-import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
 import { AppState } from 'src/@agtailw/store/states/AppState';
+import { LoadingTitleAction } from "@agtailw/store/actions/title.action";
 
 @Component({
   selector: 'app-tailwind-feature',

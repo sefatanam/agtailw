@@ -1,7 +1,7 @@
-import { LoadingTitleAction } from './../../store/actions/title.action';
-import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/@agtailw/store/states/AppState';
+import { LoadingTitleAction } from "@agtailw/store/actions/title.action";
 
 @Component({
   selector: 'app-tailwind-datatable',
@@ -14,7 +14,7 @@ export class TailwindDatatableComponent implements OnInit, AfterViewInit ,AfterC
     private store$: Store<AppState>
   ) { }
   ngAfterViewInit(): void {
-  
+
   }
 
   ngOnInit(): void {
