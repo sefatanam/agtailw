@@ -8,22 +8,17 @@ import { LoadingTitleAction } from "@agtailw/store/actions/title.action";
   templateUrl: './tailwind-datatable.component.html',
   styleUrls: ['./tailwind-datatable.component.scss']
 })
-export class TailwindDatatableComponent implements OnInit, AfterViewInit ,AfterContentInit{
+export class TailwindDatatableComponent implements OnInit {
 
   constructor(
     private store$: Store<AppState>
   ) { }
-  ngAfterViewInit(): void {
-
-  }
 
   ngOnInit(): void {
-
+    this.store$.dispatch(new LoadingTitleAction("Table"))
   }
 
-  ngAfterContentInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Data Table"))
-  }
+
 
 
 }

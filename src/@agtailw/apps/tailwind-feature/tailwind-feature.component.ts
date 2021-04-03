@@ -8,21 +8,15 @@ import { LoadingTitleAction } from "@agtailw/store/actions/title.action";
   templateUrl: './tailwind-feature.component.html',
   styleUrls: ['./tailwind-feature.component.scss']
 })
-export class TailwindFeatureComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class TailwindFeatureComponent implements OnInit {
 
   constructor(
     private store$: Store<AppState>
   ) { }
-  ngAfterViewInit(): void {
 
-  }
-
-  ngAfterContentInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Features"))
-  }
 
   ngOnInit(): void {
-
+    this.store$.dispatch(new LoadingTitleAction("Features"))
   }
 
 }

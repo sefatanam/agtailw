@@ -8,23 +8,16 @@ import { AppState } from "@agtailw/store/states/AppState";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit, AfterContentInit {
+export class LoginComponent implements OnInit {
 
   constructor(
     private store$: Store<AppState>
   ) {
   }
 
-  ngAfterContentInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("SignIn Form"));
-  }
-
-  ngAfterViewInit(): void {
-
-  }
 
   ngOnInit(): void {
-
+    this.store$.dispatch(new LoadingTitleAction("SignIn Form"));
   }
 
 }
