@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("SignUp Form"));
+    this.store$.dispatch(new LoadingTitleAction("SignIn Form"));
   }
 
   ngAfterViewInit(): void {
