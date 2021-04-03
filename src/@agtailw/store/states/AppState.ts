@@ -1,0 +1,5 @@
+import { TitleState } from "./apps/TitleState";
+
+export interface AppState {
+  readonly titles: TitleState
+}

@@ -61,6 +61,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/@agtailw/store/ReduxDevToolConfig/index.ts",
+                  "with": "src/@agtailw/store/ReduxDevToolConfig/index.prod.ts"
                 }
               ],
               "optimization": true,
