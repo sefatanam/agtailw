@@ -19,8 +19,8 @@ export class NavShellComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title$ = this.stores$.select(store => store.titles.name);
-    this.loading$ = this.stores$.select(store => store.titles.loading);
+    this.title$ = this.stores$.select(store => store.title.name);
+    this.loading$ = this.stores$.select(store => store.title.loading);
   }
 
 }

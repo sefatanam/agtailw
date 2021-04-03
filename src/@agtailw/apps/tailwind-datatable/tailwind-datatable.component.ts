@@ -1,4 +1,7 @@
+import { LoadingTitleAction } from './../../store/actions/title.action';
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/@agtailw/store/states/AppState';
 
 @Component({
   selector: 'app-tailwind-datatable',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TailwindDatatableComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private store$: Store<AppState>
+  ) { }
 
   ngOnInit(): void {
+    this.store$.dispatch(new LoadingTitleAction("Data Table"))
   }
 
 }

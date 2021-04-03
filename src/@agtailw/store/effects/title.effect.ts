@@ -9,25 +9,22 @@ import { of } from "rxjs";
 
 @Injectable()
 
-export class TitleEffect{
-  titleLoading$ = createEffect(()=>this.actions$
+export class TitleEffect {
+  titleLoading$ = createEffect(() => this.actions$
     .pipe(
       ofType<LoadingTitleAction>(TitleActionTypes.LOADING_TITLE),
-      mergeMap((data)=>of(data).pipe(
-        map((value)=>{
-          throw new Error('Given title is empty');
-          if(value.payload!==null){
+      mergeMap((data) => of(data).pipe(
+        map((value) => {
+          if (value.payload !== null) {
             return new LoadingTitleSuccessAction(value.payload);
           }
-
-          throw new Error('Given title is empty');
+          return new LoadingTitleFailedAction('Title Not Found');
         }),
-        catchError(err => of(new LoadingTitleFailedAction(err)))
+        catchError(() => of(new LoadingTitleFailedAction('Title Not Found.')))
       ))
     ));
 
 
-
-  constructor(private actions$: Actions, private router$ : Router) {
+  constructor(private actions$: Actions) {
   }
 }

@@ -1,23 +1,17 @@
+import { TitleAction } from './../actions/title.action';
 import { TitleState } from "../states/apps/TitleState";
-import { Action, createReducer, on } from "@ngrx/store";
-import {
-  LoadingTitleAction,
-  LoadingTitleSuccessAction,
-  LoadingTitleFailedAction,
-  TitleActions
-} from "../actions/title.action";
 import { TitleActionTypes } from "../action-types/TitleActionTypes";
 
-export const initialState: TitleState = {error: undefined, loading: false, name: ""};
+export const initialState: TitleState = { error: '', loading: false, name: "" };
 
-export function TitleReducer(state: TitleState = initialState, actions: TitleActions): TitleState {
-  switch (actions.type) {
+export function TitleReducer(state: TitleState = initialState, titleAction: TitleAction): TitleState {
+  switch (titleAction.type) {
     case TitleActionTypes.LOADING_TITLE:
-      return {error: undefined, loading: true, name: actions.payload};
+      return { error: '', loading: true, name: titleAction.payload };
     case TitleActionTypes.LOADING_TITLE_SUCCESS:
-      return {error: undefined, loading: false, name: actions.payload};
+      return { error: '', loading: false, name: titleAction.payload };
     case TitleActionTypes.LOADING_TITLE_FAILED:
-      return {error: actions.payload, loading: false, name: ''};
+      return { error: titleAction.payload, loading: false, name: '' };
     default:
       return state;
   }
