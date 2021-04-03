@@ -1,5 +1,5 @@
 import { LoadingTitleAction } from './../../store/actions/title.action';
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/@agtailw/store/states/AppState';
 
@@ -8,14 +8,20 @@ import { AppState } from 'src/@agtailw/store/states/AppState';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterContentInit {
 
   constructor(
     private store$: Store<AppState>
   ) { }
+  ngAfterContentInit(): void {
+    this.store$.dispatch(new LoadingTitleAction("SignUp Form"));
+  }
+  ngAfterViewInit(): void {
+
+  }
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Login Form"));
+
   }
 
 }

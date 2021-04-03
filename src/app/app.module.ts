@@ -18,7 +18,7 @@ import { NgRxDevToolModules } from "../@agtailw/store/ReduxDevToolConfig";
     BrowserModule,
     SharedModule,
     StoreModule.forRoot({ title: TitleReducer }),
-    EffectsModule.forRoot([TitleEffect]),
+
     NgRxDevToolModules
   ],
   providers: [],

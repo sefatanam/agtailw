@@ -2,7 +2,7 @@ import { TitleAction } from './../actions/title.action';
 import { TitleState } from "../states/apps/TitleState";
 import { TitleActionTypes } from "../action-types/TitleActionTypes";
 
-export const initialState: TitleState = { error: '', loading: false, name: "" };
+export const initialState: TitleState = { error: '', loading: false, name: "Welcome" };
 
 export function TitleReducer(state: TitleState = initialState, titleAction: TitleAction): TitleState {
   switch (titleAction.type) {
