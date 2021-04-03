@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --hmr --prod",
-    "build": "ng build",
+    "start": "ng serve --ssl true --ssl-cert ./localhost.pem --ssl-key ./localhost-key.pem",
+    "build": "ng build --prod",
     "build:prod": "NODE_ENV=production ng build --prod --watch",
     "test": "ng test",
     "lint": "ng lint",
