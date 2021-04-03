@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("SignIn Form"));
+    this.store$.dispatch(new LoadingTitleAction("Login"));
   }
 
 }
