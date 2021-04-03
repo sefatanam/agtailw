@@ -12,11 +12,13 @@ export class TailwindFeatureComponent implements OnInit {
 
   constructor(
     private store$: Store<AppState>
-  ) { }
+  ) {
+    this.store$.dispatch(new LoadingTitleAction("Features"))
+  }
 
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Features"))
+
   }
 
 }

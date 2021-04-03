@@ -12,10 +12,12 @@ export class WelcomeComponent implements OnInit {
 
   constructor(
     private store$: Store<AppState>
-  ) { }
+  ) {
+    this.store$.dispatch(new LoadingTitleAction("Welcome"));
+  }
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Welcome"));
+
   }
 
 }

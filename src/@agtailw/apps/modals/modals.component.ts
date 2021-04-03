@@ -10,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalsComponent implements OnInit {
 
-  constructor(private store$: Store<AppState>) { }
+  constructor(private store$: Store<AppState>) {
+    this.store$.dispatch(new LoadingTitleAction("Modals"))
+  }
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Modals"))
+
   }
 
 

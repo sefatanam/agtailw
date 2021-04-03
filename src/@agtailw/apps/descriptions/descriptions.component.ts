@@ -11,10 +11,12 @@ import { Store } from '@ngrx/store';
 export class DescriptionsComponent implements OnInit {
 
 
-  constructor(private store$: Store<AppState>) { }
+  constructor(private store$: Store<AppState>) {
+    this.store$.dispatch(new LoadingTitleAction("Descriptions"))
+  }
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Descriptions"))
+
   }
 
 }

@@ -1,3 +1,4 @@
+import { TitleEffect } from './../@agtailw/store/effects/title.effect';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -6,6 +7,7 @@ import { SharedModule } from "@agtailw/shared/shared.module";
 import { StoreModule } from "@ngrx/store";
 import { TitleReducer } from "@agtailw/store/reducers/title.reducer";
 import { NgRxDevToolModules } from "@agtailw/store/ReduxDevToolConfig";
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { NgRxDevToolModules } from "@agtailw/store/ReduxDevToolConfig";
     BrowserModule,
     SharedModule,
     StoreModule.forRoot({ title: TitleReducer }),
-
+    EffectsModule.forRoot([TitleEffect]),
     NgRxDevToolModules
   ],
   providers: [],

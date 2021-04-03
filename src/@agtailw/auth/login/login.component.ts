@@ -13,11 +13,12 @@ export class LoginComponent implements OnInit {
   constructor(
     private store$: Store<AppState>
   ) {
+    this.store$.dispatch(new LoadingTitleAction("Login"));
   }
 
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Login"));
+
   }
 
 }

@@ -12,10 +12,12 @@ export class TailwindDatatableComponent implements OnInit {
 
   constructor(
     private store$: Store<AppState>
-  ) { }
+  ) {
+    this.store$.dispatch(new LoadingTitleAction("Table"));
+  }
 
   ngOnInit(): void {
-    this.store$.dispatch(new LoadingTitleAction("Table"))
+
   }
 
 
